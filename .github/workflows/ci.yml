@@ -21,5 +21,4 @@ jobs:
         run: ruff check .
 
       - name: テスト実行 + カバレッジ
-        run: pytest --cov=app --cov-report=term-missing tests/
-
+        run: pytest --cov=app --cov-report=term-missing --cov-fail-under=80 tests/
